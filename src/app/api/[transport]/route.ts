@@ -6,7 +6,7 @@ const handler = createMcpHandler(
 		server.tool(
 			"pingpong",
 			"Ping Pong message",
-			{ ping: z.number().int().min(2) },
+			{ ping: z.string() },
 			async ({ ping }) => {
 				return {
 					content: [
